@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <h2>Magic Notes</h2>
+        <a href="./index.html" class="list all">Home</a>
+        <a href="./allNotes.html" target="_blank" class="list all">All Notes <span id="length">()</span></a>
+        <div class="search all">
+            <input type="text" name="search-bar" id="search-bar" placeholder="Search Here">
+            <!-- <button type="button" class="btn" id="searchBtn">Search</button> -->
+        </div>
+        <div id="menu-cross" class=" menu">
+            <span id="sp1" class="span"></span>
+            <span id="sp2" class="span"></span>
+            <span id="sp3" class="span"></span>
+        </div>
+        
+    </nav>
+    <div id="message"> 
+        <h3 id="message-body"> This is message body and message text  </h3>
+    </div>
+    <h1 class="heading">All Notes</h1>
+    <div id="show-note">
+        <!-- <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">This is heading</h3>
+                <p class="card-text">This is card body. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consectetur earum possimus laboriosam commodi vitae voluptatem laborum cupiditate adipisci vel
+                    aspernatur sunt magni perspiciatis, blanditiis quas similique minima eligendi facere a?</p>
+                    <button> <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M864 256H736v-80c0-35.3-28.7-64-64-64H352c-35.3 0-64 28.7-64 64v80H160c-17.7 0-32 14.3-32 32v32c0 4.4 3.6 8 8 8h60.4l24.7 523c1.6 34.1 29.8 61 63.9 61h454c34.2 0 62.3-26.8 63.9-61l24.7-523H888c4.4 0 8-3.6 8-8v-32c0-17.7-14.3-32-32-32zm-200 0H360v-72h304v72z"></path></svg> </button>
+                    <button id="edit"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#000" stroke-width="2" d="M14,4 L20,10 L14,4 Z M22.2942268,5.29422684 C22.6840146,5.68401459 22.6812861,6.3187139 22.2864907,6.71350932 L9,20 L2,22 L4,15 L17.2864907,1.71350932 C17.680551,1.319449 18.3127724,1.31277239 18.7057732,1.70577316 L22.2942268,5.29422684 Z M3,19 L5,21 M7,17 L15,9"></path></svg></button>
+            </div>
+        </div> -->
+    </div>
+
+    <section class="Save-container">
+        <div class="saveNote-container">
+            <h1 id="save-head">Save to notes in the Magic Notes</h1>
+            <input type="text" name="title" id="Stitle" placeholder="Enter title here">
+            <textarea name="note" id="Snote" cols="30" rows="10" placeholder="Enter note here"></textarea>
+            <button id="saveNote" class="btn"> Save Note</button>
+        </div>
+    </section>
+    <!-- js file here -->
+    <script src="allnotes.js"></script>
+</body>
+
+</html>
+
+

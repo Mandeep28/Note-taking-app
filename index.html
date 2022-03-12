@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note taking project</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <h2>Magic Notes</h2>
+        <a href="./index.html" class="list all">Home</a>
+        <a href="./allNotes.html" target="_blank" class="list all">All Notes <span id="length">()</span></a>
+        <div class="search all">
+            <input type="text" name="search-bar" id="search-bar" placeholder="Search Here">
+            <!-- <button type="button" class="btn" id="searchBtn">Search</button> -->
+        </div>
+        <div id="menu-cross" class=" menu">
+            <span id="sp1" class="span"></span>
+            <span id="sp2" class="span"></span>
+            <span id="sp3" class="span"></span>
+        </div>
+        
+    </nav>
+    <div id="message"> 
+        <h3 id="message-body"> This is message body and message text  </h3>
+    </div>
+    <section class="container">
+        <div class="addNote-container">
+            <h1 class="heading">Welcome to Magic Notes</h1>
+            <input type="text" name="title" id="title" placeholder="Enter title here">
+            <textarea name="note" id="note" cols="30" rows="10" placeholder="Enter note here"></textarea>
+            <button id="addNote" class="btn"> Add Note</button>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

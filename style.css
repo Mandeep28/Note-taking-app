@@ -1,0 +1,335 @@
+/* ------------inport font from the font.google.com ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Tamma+2&family=Inter:wght@200&family=Roboto+Mono:wght@200&display=swap');
+
+/* -----------CSS reset ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.html{
+    scroll-behavior: smooth;
+}
+
+/* -------------------CSS for navbar and search bar & button ---------------------- */
+.navbar {
+    background: #000;
+    justify-content: stretch;
+    color: white;
+    padding: 15px 5px;
+}
+
+.navbar h2 {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.list {
+    color: white;
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+.search {
+    float: right;
+    margin: 0px 10px;
+}
+
+#search-bar,
+#searchBtn {
+    margin: 0 5px;
+    padding: 4px 9px;
+    font-size: 0.956rem;
+    border-radius: 7px;
+}
+
+/* -------------Menu button click effect ------------------- */
+#menu-cross {
+    background: transparent;
+    display:none;
+    padding: 2px 3px;
+    height: 40px;
+    width: 50px;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.span {
+    margin: 2px 0;
+    height: 4px;
+    width: 90%;
+    background: rgb(255, 255, 255);
+    display: block;
+    transition: transform 0.5s, width 0.5s;
+}
+
+.open #sp1 {
+    margin: 12px 0;
+    transform: translate(0px, 4px) rotate(45deg);
+}
+
+.open #sp2 {
+    display: none;
+}
+
+.open #sp3 {
+    transform: rotate(124deg);
+    transform: translate(0px, -14px) rotate(139deg);
+}
+
+/* ---------------CSS for the container and addNote-container and also for the input tags */
+.container {
+    width: 100%;
+    /* height: 80%; */
+    /* margin: 10px 15vh; */
+    text-align: center;
+}
+
+.addNote-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#title,
+#note {
+    width: 100%;
+    padding: 9px;
+    margin: 10px 0;
+    border: 1.7px solid black;
+    border-radius: 14px;
+}
+
+.btn {
+    padding: 5px;
+    width: 140px;
+    background-color: #229522de;
+    outline:none;
+    border:none;
+    color:#fff;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #216621de;
+    /* width: 150px;
+    padding: 7px; */
+}
+
+.heading {
+    font-size: 2rem;
+    margin: 13px 0;
+    padding: 6px 0;
+    text-align: center;
+}
+
+/* -------------CSS for the message div and the button of it  --------------  */
+#message {
+    position: relative;
+    padding: 9px;
+    color: rgb(15, 14, 14);
+    background: #f8d7da;
+    /* background:#d1e7dd;
+    background:#fff3cd; */
+    font-weight: none;
+    display:none;
+}
+
+#message-body {
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    margin: 2px auto;
+}
+
+/* -----------Now css for the all notes container --------------------- */
+#show-note {
+    display: flex;
+    /* padding: 1rem 1.5rem; */
+    flex-wrap: wrap;
+    height: 100vh;
+    width: 80%;
+    margin: 50px 10%;
+}
+
+.card {
+    width: 500px;
+    height: 400px;
+    max-height: 50vh;
+    margin: 10px 15px;
+    border: 2px solid black;
+    border-radius: 9px;
+    overflow: scroll;
+    padding: 0px 15px;
+    position: relative;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 0;
+    margin: 10px 10%;
+    font-family: 'Baloo Tamma 2', cursive;
+}
+
+.card-text {
+    font-size: 1.2rem;
+    width: 80%;
+    margin: 10px auto;
+    text-align: justify;
+    font-family: 'Baloo 2', cursive;
+}
+
+.card-body button {
+    background: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.card-body .editBtn {
+    top: 10px;
+    right: 15px;
+    font-size: 23px;
+}
+
+.card-body .editBtn:hover {
+    font-size: 25px;
+    color: #0b9befde;
+}
+
+.card-body .delBtn {
+
+    top: 42px;
+    right: 15px;
+    font-size: 23px;
+}
+
+.card-body .delBtn:hover {
+    font-size: 26px;
+    color: #e51a1ad4;
+
+}
+
+.card::-webkit-scrollbar {
+    width: 9px;
+  
+    /* width of the entire scrollbar .card */
+}
+
+.card::-webkit-scrollbar-track {
+    background: default;
+    /* color of the tracking area */
+}
+
+
+.card::-webkit-scrollbar-thumb {
+    background-color: rgb(59, 57, 57);
+    border-radius: 12px;
+}
+
+/* ---------------CSS for the edit and save note container  */
+.Save-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* z-index: 100; */
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+    background-attachment: fixed;
+    visibility: hidden;
+}
+
+.saveNote-container {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#title,
+#note ,
+#Stitle,
+#Snote {
+    width: 100%;
+    padding: 9px;
+    margin: 10px 0;
+    border: 1.7px solid black;
+    border-radius: 14px;
+}
+
+#save-head {
+    font-size: 2rem;
+    margin: 13px 0;
+    padding: 6px 0;
+    text-align: center;
+    color:#fff;
+}
+/* --------------Here add some Media query --------------------------- */
+@media screen and (max-width:800px) {
+
+    .navbar h2,
+    .list {
+        margin: 10px 5px;
+        display: block;
+    }
+    
+    
+    .search {
+        margin: 5px 0;
+        float: none;
+        display: block;
+        /* display:none; */
+    }
+    #search-bar {
+        width: 200px;
+    }
+    .all {
+        display: none;
+    }
+
+
+    #message-body {
+        font-size: 0.7rem;
+    }
+    .container{
+        margin-bottom: 40px;
+    }
+    .addNote-container {
+        width: 70%;
+        margin: 10px auto;
+    }
+    .card-title {
+        text-align: center;
+        font-size: 1.7445rem;
+        margin: 0 18px;
+    }
+    
+    .card-text {
+        font-size: 1rem;
+    }
+    .saveNote-container {
+        width: 70vw;
+    }
+    #menu-cross {
+        visibility: visible;
+    }
+
+}
